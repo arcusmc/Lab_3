@@ -1,0 +1,80 @@
+#Chris Davidson
+#October 20 2014
+#GIS 502
+
+#This code made all of the shapes up to eight sides if requested until something went wrong with the code, now it doesn't draw?
+
+play = raw_input("How many sides would you like to draw, please write the number using letters? (ex-Three):")
+
+if play == "Three":
+    import turtle    #Draws a triangle
+        
+    wn = turtle.Screen()
+    Three = turtle.Turtle()
+
+    for i in range(3):
+        Three.forward(100)
+        Three.left(360/3)
+
+
+elif play == "Four":
+    import turtle    #Draws a square
+
+    wn = turtle.Screen()
+    Four = turtle.Turtle()
+
+    for i in range(4):
+        Four.forward(100)
+        Four.left(360/4)
+
+
+elif play == "Five":
+    import turtle    #Draws a pentagon
+
+    wn = turtle.Screen()
+    Five = turtle.Turtle()
+
+    for i in range(5):
+        Five.forward(100)
+        Five.left(360/5)
+
+    
+elif play == "Six":
+    import turtle    #Draws a hexagon
+
+    wn = turtle.Screen()
+    Six = turtle.Turtle()
+
+    for i in range(6):
+        Six.forward(100)
+        Six.left(360/6)
+
+
+elif play == "Seven":
+    import turtle    #Draws a heptagon
+
+    wn = turtle.Screen()
+    Seven = turtle.Turtle()
+
+    for i in range(7):
+        Seven.forward(100)
+        Seven.left(360/7)
+
+
+elif play == "Eight":
+    import turtle    #Draws an octogon
+
+    wn = turtle.Screen()
+    Eight = turtle.Turtle()
+
+    for i in range(8):
+        Eight.forward(100)
+        Eight.left(360/8)
+
+wn.exitonclick()
+
+#References:
+#
+#www.w3schools.com, www.microsoftvisualacademy.com, www.codeacademy.com, and google,
+#http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/ifstatements.html,
+#https://www.python.org/, http://www.tutorialspoint.com/python/.htm
