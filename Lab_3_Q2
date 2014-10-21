@@ -1,0 +1,42 @@
+#Chris Davidson
+#October 16 2014
+#GIS 501 - Lab 3 Question 2
+
+#This code counts the total number of words in the provided .txt document.
+
+Lab_3_Q2 = open("F:\\GradSchool\\MSGT_GIS_501\\Labs\\Lab_3\\Data_L3\\GIS_is_the_best.txt")    #Opens required .txt file
+
+file_list = Lab_3_Q2.read()    #Reads the designated .txt file
+
+system_count, science_count, total_words = 0, 0, 0    #Required parts to be counted and initial values
+
+for word in file_list.split(" "):    #Splits pathname and returns a tuple that has path and filename
+    
+    if word.lower() == "systems":    
+
+            system_count = system_count + 1    #Counts the words "system" and "System"
+
+    elif word.lower() == "science":
+
+            science_count = science_count + 1    #Counts the words "science" and "Science"
+    else:
+            total_words = total_words + 1    #Counts all words besides systems and science
+
+total_words = total_words + science_count + system_count    #Basic formula for adding all the words together
+
+print "'system' occurences = " + str(system_count)    #Total occurences of the word system 
+
+print "'science' occurences = " + str(science_count)   #Total occurences of the word science    
+
+print "Total words = " + str(total_words)   #Calculates the total number of words
+
+#References:
+#
+#www.w3schools.com, www.microsoftvisualacademy.com, www.codeacademy.com, and google
+#
+#Thanks to James and Sam for helping me with this lab, without it I would have been lost.
+#Without their help I would have been lost since I wasn't trained as a computer programmer.
+
+
+
+
