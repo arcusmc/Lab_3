@@ -26,3 +26,5 @@ for root, dirs, files in os.walk(in_path):
             
         else:
             os.rename(in_path + file_lower, mypath + "file_" + file_split[0] + '.txt')
+
+#   Thanks a ton to Sam for the help
