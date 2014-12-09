@@ -1,0 +1,28 @@
+#Chris Davidson
+#GIS 501 HW Question 3
+#December 8 2014
+
+import os
+
+in_path = 'E:\\A_Masters_Program\\501\Lab_3\\text_files\\'
+
+mypath = 'E:\\A_Masters_Program\\501\Lab_3\\text_files_fixed\\'
+
+if not os.path.isdir(mypath):
+
+    os.makedirs(mypath)   
+
+for root, dirs, files in os.walk(in_path):
+
+    for file_lower in files:
+
+        file_lower = file_lower.lower()
+        
+        file_split = file_lower.split('.')
+    	
+        if file_split[1] == 'txt':
+        
+            os.rename(in_path + file_lower, mypath + "file_" + file_lower +'.txt')
+            
+        else:
+            os.rename(in_path + file_lower, mypath + "file_" + file_split[0] + '.txt')
