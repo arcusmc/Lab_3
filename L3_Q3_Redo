@@ -1,0 +1,33 @@
+#Chris Davidson
+#December 8 2014
+#GIS 501 - Lab 3 Question 3
+
+lab_3_text = open('F:\\GradSchool\\MSGT_GIS_501\\Labs\\Lab_3\\Data_L3\\GIS_is_the_best.txt')
+
+science_list = lab_3_text.read()
+
+def replace_all(text, dic):
+    
+        for i, j in dic.iteritems():
+                text = text.replace(i, j)
+                
+        return text
+    
+my_text = science_list    # This defines my_text
+
+reps = {'Science':'System','science':'system'}
+
+txt = replace_all(my_text, reps)
+
+out_file = open('F:\\GradSchool\\MSGT_GIS_501\\Labs\\Lab_3\\Data_L3\\GIS_is_the_best_Problem_3_solved1.txt', 'w+')
+
+out_file.write (txt)
+
+out_file.close()
+
+print out_file
+
+#   References:
+#   Thanks to Sam for the help with this lab
+#   www.w3schools.com, www.microsoftvisualacademy.com, http://www.tutorialspoint.com/python/,
+#   www.codeacademy.com, http://boards.3stepstudio.com, http://stackoverflow.com/questions and google search
